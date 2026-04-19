@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-[#F9FAFB] text-[#111827] font-sans antialiased text-[14px] leading-[1.6];
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#18181B] text-white hover:bg-[#3F3F46] px-4 py-2 rounded-[6px] transition-colors duration-200 font-medium;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-[#18181B] border border-[#E5E7EB] hover:bg-[#F9FAFB] px-4 py-2 rounded-[6px] transition-colors duration-200 font-medium;
+  }
+
+  .card {
+    @apply bg-white border border-[#E5E7EB] rounded-[8px] shadow-sm overflow-hidden;
+  }
+
+  .input-field {
+    @apply bg-white border border-[#E5E7EB] rounded-[6px] px-3 py-2 focus:outline-none focus:ring-1 focus:ring-[#6366F1] focus:border-[#6366F1] transition-all;
+  }
+
+  .badge {
+    @apply px-2 py-0.5 rounded-full text-[12px] font-medium;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[#E5E7EB] rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-[#D1D5DB];
+}
+
